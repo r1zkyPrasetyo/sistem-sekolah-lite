@@ -1,4 +1,4 @@
-## sistem-sekolah-lite
+## sistem-sekolah-lite(SSL)
 
 A School Management Software For Indonesia, ,dibangun untuk digunakan oleh institusi sekolah baik SD, SMP hingga Jenjang SMA Dibangun dengan tampilan sderhana agar mudah dipergunakan. Saya membuat aplikasi ini agar semua sekolah dapat menggunakan aplikasi ini juga bisa disebut SSL. Fokus Aplikasi ini akan dimulai dengan pelaporan uang SPP, Pemasukan< pengeluaran, Saldo dan AKun akun yang berkaitan dengan keuangan
 
