@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+
+	# mengubah url denga url yang tanpa ekstensi
+	RewriteRule ^dashboard$ index.php?page=dashboard [L]
+	RewriteRule ^siswa$ index.php?page=siswa [L]
+
+
+	Options All -Indexes
+</IfModule>
