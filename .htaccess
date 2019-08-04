@@ -6,5 +6,11 @@
 	RewriteRule ^siswa$ index.php?page=siswa [L]
 
 
+
+	# redirect jika ada dokumn yang di cari tidak ada 
+	ErrorDocument 404 http://localhost/sistem-sekolah-lite/404.php
+
+
+
 	Options All -Indexes
 </IfModule>

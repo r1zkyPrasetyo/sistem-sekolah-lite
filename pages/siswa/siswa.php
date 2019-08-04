@@ -8,8 +8,8 @@ $sqlSiswa = mysqli_query($conn, $querySiswa)or die(mysqli_error($conn));
 
  <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Sistem Sekolah Lite - Siswa/i</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+            <h1 class="h3 mb-0 text-gray-800">Siswa Siswa</h1>
+            <a href="#" class="d-none d-sm-inline-block btn btn-primary shadow-sm"><i class="fas fa-user-plus fa-sm text-white-50"></i> Tambah Murid Baru</a>
           </div>
 
           <!-- Content Row -->
@@ -24,7 +24,7 @@ $sqlSiswa = mysqli_query($conn, $querySiswa)or die(mysqli_error($conn));
                       <div class="h5 mb-0 font-weight-bold text-gray-800">200 Siswa</div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-male fa-4x text-primary"></i>
+                      <i class="fas fa-male fa-3x text-primary"></i>
                     </div>
                   </div>
                 </div>
@@ -40,7 +40,7 @@ $sqlSiswa = mysqli_query($conn, $querySiswa)or die(mysqli_error($conn));
                       <div class="h5 mb-0 font-weight-bold text-gray-800">215 siswa</div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-female fa-4x text-info"></i>
+                      <i class="fas fa-female fa-3x text-info"></i>
                     </div>
                   </div>
                 </div>
@@ -56,7 +56,7 @@ $sqlSiswa = mysqli_query($conn, $querySiswa)or die(mysqli_error($conn));
                       <div class="h5 mb-0 font-weight-bold text-gray-800">415 siswa</div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-users fa-4x text-success"></i>
+                      <i class="fas fa-users fa-3x text-success"></i>
                     </div>
                   </div>
                 </div>
