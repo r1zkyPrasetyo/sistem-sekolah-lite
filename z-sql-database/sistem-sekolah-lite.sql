@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 03, 2019 at 06:24 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.1
+-- Generation Time: Aug 06, 2019 at 12:00 PM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.3.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,80 @@ SET time_zone = "+00:00";
 --
 -- Database: `sistem-sekolah-lite`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `guru`
+--
+
+CREATE TABLE `guru` (
+  `id_guru` int(11) NOT NULL,
+  `nip` varchar(10) NOT NULL,
+  `nik` varchar(16) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `jk` enum('L','P') NOT NULL,
+  `tempat_lhr` varchar(50) NOT NULL,
+  `tanggal_lhr` date NOT NULL,
+  `agama` varchar(20) NOT NULL,
+  `status_menikah` enum('sudah','belum') NOT NULL,
+  `alamat` text NOT NULL,
+  `handphone` varchar(16) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `aktif` enum('Y','N') NOT NULL,
+  `jenis` enum('kelas','mapel') NOT NULL,
+  `mapel` varchar(100) NOT NULL,
+  `keterangan` text NOT NULL,
+  `modified_at` datetime NOT NULL,
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pegawai`
+--
+
+CREATE TABLE `pegawai` (
+  `id_pegawai` int(11) NOT NULL,
+  `nip` varchar(16) NOT NULL,
+  `nik` varchar(16) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `jk` enum('L','P') NOT NULL,
+  `tempat_lht` varchar(100) NOT NULL,
+  `tanggal_lhr` date NOT NULL,
+  `agama` varchar(50) NOT NULL,
+  `status_menikah` enum('sudah','belum') NOT NULL,
+  `alamat` text NOT NULL,
+  `telpon` varchar(16) NOT NULL,
+  `handphone` varchar(16) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `keterangan` text NOT NULL,
+  `aktif` enum('Y','N') NOT NULL,
+  `level` enum('admin','user') NOT NULL,
+  `created_at` datetime NOT NULL,
+  `modified_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sekolah`
+--
+
+CREATE TABLE `sekolah` (
+  `id_sekolah` int(3) NOT NULL,
+  `nama_sekolah` varchar(255) NOT NULL,
+  `alamat` text NOT NULL,
+  `telp` varchar(16) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `web` varchar(100) NOT NULL,
+  `url` varchar(100) NOT NULL,
+  `logo` varchar(100) NOT NULL,
+  `akreditasi` varchar(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -64,10 +138,50 @@ INSERT INTO `siswa` (`nis`, `nisn`, `nik`, `nama`, `tempat_lhr`, `tanggal_lhr`, 
 --
 
 --
+-- Indexes for table `guru`
+--
+ALTER TABLE `guru`
+  ADD PRIMARY KEY (`id_guru`);
+
+--
+-- Indexes for table `pegawai`
+--
+ALTER TABLE `pegawai`
+  ADD PRIMARY KEY (`id_pegawai`);
+
+--
+-- Indexes for table `sekolah`
+--
+ALTER TABLE `sekolah`
+  ADD PRIMARY KEY (`id_sekolah`);
+
+--
 -- Indexes for table `siswa`
 --
 ALTER TABLE `siswa`
   ADD PRIMARY KEY (`nis`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `guru`
+--
+ALTER TABLE `guru`
+  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pegawai`
+--
+ALTER TABLE `pegawai`
+  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `sekolah`
+--
+ALTER TABLE `sekolah`
+  MODIFY `id_sekolah` int(3) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

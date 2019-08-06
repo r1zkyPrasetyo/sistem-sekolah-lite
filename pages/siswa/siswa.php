@@ -90,7 +90,7 @@ $sqlSiswa = mysqli_query($conn, $querySiswa)or die(mysqli_error($conn));
                 <!-- Card Body -->
                 <div class="card-body">
                   <div class="table-responsive-md table-responsive-sm">
-                    <table id="table1" class="table table-striped table-bordered" style="width:100%">
+                    <table id="table1" class="table table-sm table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>
                           <th>N0</th>
