@@ -3,7 +3,6 @@ require_once 'config/config.php';
 
 // helpers/ funtion
 require_once 'helpers/base_url.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +41,7 @@ require_once 'helpers/base_url.php';
         <div class="sidebar-brand-icon">
           <i class="far fa-star"></i>
         </div>
-        <div class="sidebar-brand-text mx-1">Hikmatul Fadhillah</div>
+        <div class="sidebar-brand-text mx-1"><?=$nama_sekolah;?></div>
       </a>
 
       <hr class="sidebar-divider my-0">
@@ -62,7 +61,7 @@ require_once 'helpers/base_url.php';
       </div>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="sekolah">
           <i class="fas fa-fw fa-users"></i>
           <span>Sekolah</span>
         </a>
@@ -76,14 +75,14 @@ require_once 'helpers/base_url.php';
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="guru">
           <i class="fas fa-fw fa-users"></i>
           <span>Guru</span>
         </a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="pegawai">
           <i class="fas fa-fw fa-users"></i>
           <span>Pegawai</span>
         </a>

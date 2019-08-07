@@ -4,13 +4,15 @@
 	# mengubah url denga url yang tanpa ekstensi
 	RewriteRule ^dashboard$ index.php?page=dashboard [L]
 	RewriteRule ^siswa$ index.php?page=siswa [L]
+	RewriteRule ^sekolah$ index.php?page=sekolah [L]
+	RewriteRule ^edit-sekolah$ index.php?page=edit_sekolah [L]
+	RewriteRule ^guru$ index.php?page=guru [L]
+	RewriteRule ^pegawai$ index.php?page=pegawai [L]
 
 
 
 	# redirect jika ada dokumn yang di cari tidak ada 
 	ErrorDocument 404 http://localhost/sistem-sekolah-lite/404.php
-
-
 
 	Options All -Indexes
 </IfModule>

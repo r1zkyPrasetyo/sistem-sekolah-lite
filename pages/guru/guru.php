@@ -1,18 +1,17 @@
 <?php  
-$querySiswa = "SELECT * FROM siswa";
-$sqlSiswa = mysqli_query($conn, $querySiswa)or die(mysqli_error($conn));
+$queryGuru = "SELECT * FROM guru";
+$sqlGuru = mysqli_query($conn, $queryGuru)or die(mysqli_error("Error: " . $conn));
 ?>
 
 
  <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Siswa Siswa</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-primary shadow-sm"><i class="fas fa-user-plus fa-sm text-white-50"></i> Tambah Murid Baru</a>
+            <h1 class="h3 mb-0 text-gray-800">Data Guru</h1>
+            <a href="#" class="d-none d-sm-inline-block btn btn-primary shadow-sm"><i class="fas fa-user-plus fa-sm text-white-50"></i> Tambah Guru Baru</a>
           </div>
 
           <!-- Content Row -->
-          <div class="row">
-          
+          <!-- <div class="row">
             <div class="col-xl-4 col-md-6 mb-4">
               <div class="card shadow-sm h-100 py-2">
                 <div class="card-body">
@@ -60,8 +59,7 @@ $sqlSiswa = mysqli_query($conn, $querySiswa)or die(mysqli_error($conn));
                 </div>
               </div>
             </div>
-
-          </div>
+          </div> -->
           <!-- Content Row -->
 
           <div class="row">
@@ -71,7 +69,7 @@ $sqlSiswa = mysqli_query($conn, $querySiswa)or die(mysqli_error($conn));
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Data Murid Aktif</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Data Guru Aktif</h6>
                   <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -92,24 +90,22 @@ $sqlSiswa = mysqli_query($conn, $querySiswa)or die(mysqli_error($conn));
                       <thead>
                         <tr>
                           <th>N0</th>
-                          <th>NIS</th>
-                          <th>NISN</th>
+                          <th>NIP</th>
                           <th>Nama</th>
-                          <th>Tanggal Lahir</th>
+                          <th>Handphone</th>
                           <th>Aksi</th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php  
                         $no = 1;
-                        while($data = mysqli_fetch_assoc($sqlSiswa)):
+                        while($data = mysqli_fetch_assoc($sqlGuru)):
                         ?>
                           <tr>
                             <td class="text-center"><?=$no++;?></td>
-                            <td><?=$data['nis'];?></td>
-                            <td><?=$data['nisn'];?></td>
+                            <td><?=$data['nip'];?></td>
                             <td><?=$data['nama'];?></td>
-                            <td><?=$data['tanggal_lhr'];?></td>
+                            <td><?=$data['handphone'];?></td>
                             <td>
                               <a href="#" class="btn btn-success btn-sm">Detail</a>
                               <a href="#" class="btn btn-primary btn-sm">Edit</a>

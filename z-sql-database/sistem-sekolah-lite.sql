@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 06, 2019 at 12:00 PM
+-- Generation Time: Aug 07, 2019 at 11:23 AM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.7
 
@@ -50,6 +50,13 @@ CREATE TABLE `guru` (
   `created_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `guru`
+--
+
+INSERT INTO `guru` (`id_guru`, `nip`, `nik`, `nama`, `jk`, `tempat_lhr`, `tanggal_lhr`, `agama`, `status_menikah`, `alamat`, `handphone`, `email`, `password`, `aktif`, `jenis`, `mapel`, `keterangan`, `modified_at`, `created_at`) VALUES
+(1, '2018080712', '1207263005960011', 'fajar setiawan siagian', 'L', 'medan', '1996-05-30', 'islam', 'belum', 'jalan makmur gg dahlia 36', '081264808425', 'fajar7xx@gmail.com', '12345', 'Y', 'kelas', '', 'guru tetap', '2019-08-07 00:00:00', '2019-08-07 00:00:00');
+
 -- --------------------------------------------------------
 
 --
@@ -62,7 +69,7 @@ CREATE TABLE `pegawai` (
   `nik` varchar(16) NOT NULL,
   `nama` varchar(255) NOT NULL,
   `jk` enum('L','P') NOT NULL,
-  `tempat_lht` varchar(100) NOT NULL,
+  `tempat_lhr` varchar(100) NOT NULL,
   `tanggal_lhr` date NOT NULL,
   `agama` varchar(50) NOT NULL,
   `status_menikah` enum('sudah','belum') NOT NULL,
@@ -77,6 +84,13 @@ CREATE TABLE `pegawai` (
   `created_at` datetime NOT NULL,
   `modified_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `pegawai`
+--
+
+INSERT INTO `pegawai` (`id_pegawai`, `nip`, `nik`, `nama`, `jk`, `tempat_lhr`, `tanggal_lhr`, `agama`, `status_menikah`, `alamat`, `telpon`, `handphone`, `email`, `password`, `keterangan`, `aktif`, `level`, `created_at`, `modified_at`) VALUES
+(1, '201808071233', '1207262506890011', 'wiwik sari', 'P', 'medan', '1989-06-24', 'islam', 'sudah', 'jalan mawar', '', '081123452342', 'wiwiksari@gmail.com', '12345', 'sudah oke', 'Y', 'user', '2019-08-07 00:00:00', '2019-08-07 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -95,6 +109,13 @@ CREATE TABLE `sekolah` (
   `logo` varchar(100) NOT NULL,
   `akreditasi` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sekolah`
+--
+
+INSERT INTO `sekolah` (`id_sekolah`, `nama_sekolah`, `alamat`, `telp`, `email`, `web`, `url`, `logo`, `akreditasi`) VALUES
+(1, 'SD HIKMATUL FADHILLAH', 'jln denai no. 176', '061739169', 'ypi.hikmatulfadhillah@gmail.com', 'http://localhost/sistem-sekolah-lite', 'http://localhost/sistem-sekolah-lite', '/assets/img/university.png', 'A');
 
 -- --------------------------------------------------------
 
@@ -169,19 +190,19 @@ ALTER TABLE `siswa`
 -- AUTO_INCREMENT for table `guru`
 --
 ALTER TABLE `guru`
-  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `pegawai`
 --
 ALTER TABLE `pegawai`
-  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `sekolah`
 --
 ALTER TABLE `sekolah`
-  MODIFY `id_sekolah` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_sekolah` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
