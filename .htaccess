@@ -8,6 +8,7 @@
 	RewriteRule ^edit-sekolah$ index.php?page=edit_sekolah [L]
 	RewriteRule ^guru$ index.php?page=guru [L]
 	RewriteRule ^pegawai$ index.php?page=pegawai [L]
+	RewriteRule ^kelas$ index.php?page=kelas [L]
 
 
 

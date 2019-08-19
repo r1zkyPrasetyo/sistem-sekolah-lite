@@ -24,13 +24,18 @@ switch($page){
 	break;
 
 	case 'guru':
-	if(!file_exists("pages/guru/guru.php"))Die($notifikasi);
+	if(!file_exists("pages/guru/guru.php"))die($notifikasi);
 	include("pages/guru/guru.php");
 	break;
 	
 	case 'pegawai':
 	if(!file_exists("pages/pegawai/pegawai.php"))die($notifikasi);
 	include("pages/pegawai/pegawai.php");
+	break;
+
+	case 'kelas':
+	if(!file_exists("pages/kelas/kelas.php"))die($notifikasi);
+	include("pages/kelas/kelas.php");
 	break;
 	
 
